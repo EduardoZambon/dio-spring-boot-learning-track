@@ -63,7 +63,7 @@ public class TransactionController {
 
     @GetMapping("/{category}/total")
     public long readTotalSpentByCategory(@PathVariable Category category) {
-    return getTotalSpentByCategoryUseCase.execute(category);
+        return getTotalSpentByCategoryUseCase.execute(category);
     }
 
     @PostMapping(value = "/ai", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = "audio/mp3")
